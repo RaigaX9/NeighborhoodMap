@@ -1,0 +1,13 @@
+{
+  "name": "NeighborhoodMap",
+  "version": "0.0.0",
+  "description": "Project 5 for Front-End Web Developer Nanodegree",
+  "main": "css/style.css",
+  "keywords": [
+    "node"
+  ],
+  "authors": [
+    "Nishad Shah"
+  ],
+  "license": "MIT"
+}
