@@ -25,3 +25,13 @@ way for running the website.
 - `package.json` - Shows the following grunt modules installed for the project.
 - `Gruntfile.js` - Integrating the grunt modules to minify the original files into the root folder.
 - `bower.json` - Used to install the following bower components mentioned from above.
+
+## Resources
+- [Udacity Intro to Ajax](https://www.udacity.com/course/intro-to-ajax--ud110)
+- [Udacity Javascript Design Patterns](https://www.udacity.com/course/javascript-design-patterns--ud989)
+- [Google Maps API - Marker Animations](https://developers.google.com/maps/documentation/javascript/examples/marker-animations)
+- [Google Maps API - Controls](https://developers.google.com/maps/documentation/javascript/controls)
+- [Yelp API Developers Main Page](https://www.yelp.com/developers)
+- [Yelp API - Search](https://www.yelp.com/developers/documentation/v2/search_api)
+- 
+- Stack Overflow
