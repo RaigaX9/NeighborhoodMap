@@ -31,7 +31,8 @@ way for running the website.
 - [Udacity Javascript Design Patterns](https://www.udacity.com/course/javascript-design-patterns--ud989)
 - [Google Maps API - Marker Animations](https://developers.google.com/maps/documentation/javascript/examples/marker-animations)
 - [Google Maps API - Controls](https://developers.google.com/maps/documentation/javascript/controls)
+- [Youtube - Introduction to the Google Maps API](https://www.youtube.com/watch?v=ZE8ODPL2VPI)
+- [Youtube - Google Maps Javascript API](https://www.youtube.com/watch?v=keO6egndYrE)
 - [Yelp API Developers Main Page](https://www.yelp.com/developers)
 - [Yelp API - Search](https://www.yelp.com/developers/documentation/v2/search_api)
-- 
 - Stack Overflow
