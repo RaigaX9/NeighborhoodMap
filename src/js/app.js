@@ -26,7 +26,7 @@ function initialize() {
     } catch (err) {
         //If the Google Maps API does not respond, it will load this error.
         $('#map-canvas').hide();
-        $('#map-error').html('<h5>Please check your Internet connection. Please try it later!</h5>');
+        alert('Please check your Internet connection. Please try it later!');
 
     }
 }
@@ -125,7 +125,7 @@ var BusinessViewModel = function() {
             markPlaces(all_locations);
         }).error(function(e) {
             //If FourSquare data isn't being retrieved due to WIFI or other connection issues, it will print out this error.
-            $('.venue-group').html('<h2>Please check your Internet connection. Please try it later!</h2>');
+            alert('Please check your Internet connection. Please try it later!');
             console.log('error');
         });
 
