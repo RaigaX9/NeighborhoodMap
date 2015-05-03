@@ -38,7 +38,7 @@ var LocationsInfo = function(item) {
     this.phone = ko.observable(item.venue.contact.formattedPhone);
     this.rating = ko.observable(item.venue.rating);
     this.category = ko.observable(item.venue.categories[0].name);
-    this.imgSrc = ko.observable('https://irs0.4sqi.net/img/general/75x75' + item.venue.photos.groups[0].items[0].suffix);
+    this.sourceimg = ko.observable('https://irs0.4sqi.net/img/general/75x75' + item.venue.photos.groups[0].items[0].suffix);
 };
 
 //This will create the Knockout View Model
