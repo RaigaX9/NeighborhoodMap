@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Neighborhood Map - Atlanta</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
     <!-- build:css css/style.min.css -->
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- /build -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="yelp-list">
-    <div class="search-yelp">
-        <form class="input-group" data-bind="submit: updateYelpResults">
-            <input type="text" class="form-control" data-bind="value: searchTerm">
-		      <span class="input-group-btn">
-		        <button class="btn btn-danger" type="button" data-bind="click: updateYelpResults">Yelp Me!</button>
-		      </span>
-        </form>
+<div style="container-fluid">
+    <div class="row">
+        <div class="col-md-14 col-xs-14">
+            <div id="map-canvas"></div>
+            <div id="map-error"></div>
+            <form class="form-inline search-bar" role="search">
+                <div class="row">
+                    <div class="form-group col-xs-4 col-m-4">
+                        <input data-bind="value: defaultsearch" type="search" class="form-control" placeholder="Sushi" >
+                    </div>
+                    <div class="form-group col-xs-4 col-m-4">
+                        <button type="submit" data-bind="click:searchLocations" class="btn btn-default btn-md"><span class="icon-search" aria-hidden="true"></span></button>
+
+                    </div>
+                    <div class="form-group col-xs-4 col-m-4">
+                        <button  data-bind="click:showList" class="btn btn-default btn-md" id ="resultslist"><span data-bind="css: {'icon-minus': showplaces(), 'icon-plus': !showplaces()}"></span></button>
+                    </div>
+                </div>
+            </form>
+            <div data-bind="visible: showplaces" style="display: block;">
+                <div class="list-group venue-group" data-bind="foreach: locationlist">
+                    <div class="media" data-bind="click: $root.focusMarker">
+                        <a class="pull-left" href="#" target="_parent"><img alt="image" class="img-responsive" data-bind="attr: {src: imgSrc}"></a>
+                        <div class="media-body">
+                            <span class="vrating label-info badge" data-bind="text: rating"> </span>
+                            <h4 class="list-group-item-heading media-heading" data-bind="text: name"></h4>
+                            <p class="list-group-item-text categoryfont" data-bind="text: category"></p>
+                            <p class="list-group-item-text" data-bind="text: address"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <ul class="results"></ul>
 </div>
-<div id="map-canvas"></div>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 <script src="bower_components/knockout/dist/knockout.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
 <script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
 <!-- build:js js/app.min.js -->
 <script src="js/app.js"></script>
-<!-- /build -->
-<!-- build:js js/model.min.js -->
-<script src="js/model.js"></script>
 <!-- /build -->
 </body>
 </html>

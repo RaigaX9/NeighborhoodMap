@@ -1,7 +1,13 @@
 //Creates knockout view model
 function businessViewModel() {
-
-  var self = this;
+  	var self = this;
+    //debugger;
+    //self.thewindows = {
+    //    title: m[i][0],
+    //    ph: m[i][1],
+    //    pic: m[i][4],
+    //    blurb: m[i][5]
+    //};
 
     //Sets the bind-data in the search field.
 	self.searchTerm = ko.observable('Sushi');
@@ -14,7 +20,7 @@ function businessViewModel() {
 		ko.computed(function(){
 			yelpAjax('30308', self.searchTerm());
 		}, self);
-	}	
+	};
 }
 
 //Applies binding from knockout to the buisinessViewModel function.

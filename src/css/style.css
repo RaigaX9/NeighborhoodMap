@@ -2,151 +2,153 @@
 body,
 html,
 #map-canvas {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-}
-
-h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 20px 20px 0;
     margin: auto;
-    height: 120px;
-    z-index: 999;
-    text-align: center;
-    background-color: #afc4db;
-}
-
-.yelp-list ul, .search-yelp {
+    height: 115vh;
+    width: 99.9vw;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-    background-color: rgba(239, 238, 255, 0.85);
-}
-
-.yelp-list ul {
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.6s;
-    -moz-transition-duration: 0.6s;
-    -o-transition-duration: 0.6s;
-    transition-duration: 0.6s;
-    margin-left: -100%;
-    padding: 60px 0 20px;
-    height: 100%;
-    overflow-y: auto;
-    z-index: 9;
-}
-.yelp-list ul.show {
-    margin-left: 0;
-}
-.yelp-list ul h3 {
-    font-size: 20px;
-    font-family: "Droid Sans", sans-serif;
-    font-weight: 400;
-    line-height: 1.42em;
-    margin-top: 0;
-    color: #000000;
-}
-
-.yelp-list ul h3 span {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.58);
-}
-
-.yelp-list ul p span {
     display: block;
-}
-.yelp-list ul li {
-    padding: 30px 20px 20px;
-    border-top: 1px solid #000;
-    cursor: pointer;
-    list-style: none;
-    margin: 0;
-}
-.yelp-list ul li:first-child {
-    border-top: 0;
+    overflow: auto;
 }
 
-.yelp-list ul li:hover {
+#map-error {
+    display: block;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 5%;
+    padding-right: 20%;
+    padding-left: 40%;
+}
+
+.categoryfont{
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.venue-group {
+    position: absolute;
+    top: 60px;
+    display: block;
+    overflow: auto;
+    width: 280px;
+    height: 520px;
+    left: 40px;
+    z-index: 1;
+    font-family: "Droid Sans", sans-serif;
+}
+
+.list-group div:hover{
     background-color: #f6f080;
 }
 
-.yelp-list ul li.active {
-    background-color: #afc4db;
+.media {
+    background: #fff;
+    margin-top: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.58);
 }
 
-.search-yelp {
-    padding: 20px;
-    z-index: 10;
+.vinfowindow {
+    max-width: 210px;
 }
 
-.search-yelp small {
-    display: block;
-    text-align: right;
-    margin-top: 10px;
-    color: #ff4e00;
-    cursor: pointer;
+.vinfowindow .venuename {
+    font-family: "Droid Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
 }
 
-.search-yelp small:hover {
-    text-decoration: underline;
+.vrating {
+    float: right;
+    clear: left;
+    background-color: #ff4e00;
 }
 
-.information p {
-    max-width: 220px;
+.vcontact{
+    font-weight: bold;
 }
 
-.information .review {
-    position: relative;
-    border-top: 1px solid #a2a8a8;
-    padding-top: 10px;
+.search-bar {
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    left: 40px;
 }
 
-.information .review img {
-    float: left;
+.otherimg {
+    max-width: 250px !important;
+}
+.search-bar input.form-control {
+    width: 110px;
     display: inline-block;
-    max-width: 50px;
-    margin-right: 10px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
+    font-size: 12px;
 }
 
-.img-container {
-    text-align: center;
-    padding-top: 5px;
-}
-.img-container img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 5px;
+#resultslist{
+    display:none;
 }
 
-@media (max-width: 500px) {
-    .yelp-list ul li h3 {
-        font-size: 18px;
-    }
-    .yelp-list ul li p {
-        font-size: 14px;
-    }
-}
+@media only screen and (max-width : 760px) {
 
-@media (max-width: 500px) {
-    .yelp-list ul, .search-yelp {
-        width: 50%;
+    #map-error {
+        display: block;
+        overflow: auto;
+        height: 100%;
+        width: 100%;
+        padding-top: 20%;
+        padding-right: 20%;
+        padding-left: 60%;
+    }
 
+    #resultslist{
+        display:block;
     }
-    .search-yelp {
-        width: 50%;
+    .venue-group {
+        position: absolute;
+        top: 60px;
+        display: block;
+        overflow: auto;
+        width: 200px;
+        height: 80%;
+        left: 20px;
+        font-size: small;
+        z-index: 1;
     }
+    .media {
+        width: 200px;
+        height: 100px;
+        background: #fff;
+        font-size: small !important;
+    }
+    .pull-left {
+        width: 60px;
+    }
+
+    .search-bar {
+        position: absolute;
+        top: 5px;
+        z-index: 1;
+        left: 20px;
+    }
+    .search-bar input {
+        width: 100px;
+        display: inline-block;
+        font-size: 8px;
+    }
+    .badge {
+        font-size: 8px;
+    }
+
+    .media-heading,.list-group-item-text {
+        font-size: 10px;
+        word-wrap: break-word;
+    }
+
+    .vinfowindow {
+        max-width: 100px;
+    }
+
+    .vinfowindow .venuename {
+        font-size: 10px;
+    }
+
 }
