@@ -25,6 +25,11 @@ html,
     font-weight: lighter;
 }
 
+.namefont{
+    font-weight: bolder;
+    color: #204d74;
+}
+
 .venue-group {
     position: absolute;
     top: 60px;
