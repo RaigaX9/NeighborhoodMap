@@ -3,7 +3,7 @@
 This website is for the Front-End Web Developer nanodegree project where we have to create a neighborhood map at a
 certain location using Google Maps API and/or other third party APIs.
 
-##About the website
+## About the website
 This website shows the available places around Atlanta that uses Google Maps and FourSquare API. This also uses bower components
  such as Bootstrap, jQuery, and Knockout since it does give better performance for using the APIs. If the user clicks on the
 marker, a list will pop out on the left consisting of what the user selected and other results of what the user searched
